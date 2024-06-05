@@ -622,7 +622,7 @@ class Deploy(object):
                 image_uri=self.image,
                 role=sagemaker.get_execution_role(),
                 dependencies=self.dependencies,
-                # sagemaker_session=self.session,
+                sagemaker_session=self.session,
                 predictor_cls=sagemaker.predictor.Predictor,
             )
 
